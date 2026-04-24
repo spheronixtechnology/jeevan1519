@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h2 {
+            color: darkcyan;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056cc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Form</h2>
+
+    <form action="/submit" method="post">
+        <table>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Age</td>
+                <td><input type="number" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Mobile</td>
+                <td><input type="tel" pattern="[0-9]{10}" maxlength="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Clg Name</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Location</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" required> Male
+                    <input type="radio" name="gender" required> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Domain</td>
+                <td>
+                    <input type="checkbox" name="domain" required> CSE
+                    <input type="checkbox" name="domain" required> AI&ML
+                    <input type="checkbox" name="domain" required> ECE
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
