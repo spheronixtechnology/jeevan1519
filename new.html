@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Section</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+/* Flexbox Layout */
+.hero{
+    display:flex;
+    height:100vh;
+}
+
+/* Left Side */
+.left{
+    flex:1;
+    display:grid;
+    place-content:center;
+    background:linear-gradient(to right,#ff7e5f,#feb47b);
+    color:white;
+}
+
+/* Right Side (Grid for centering image) */
+.right{
+    flex:1;
+    display:grid;
+    place-items:center;
+    background-color:#f5f5f5;
+}
+
+/* Center Image Box */
+.img-box{
+    height:300px;
+    width:250px;
+    background-image:url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e');
+    background-size:cover;
+    background-position:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    
+    <div class="left">
+        <div>
+            <h1>Hero Section</h1>
+            <p>Image perfectly centered using Grid.</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="img-box"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
